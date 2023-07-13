@@ -56,9 +56,9 @@ public class ArchivoLectura {
 
     // establecer valores de cada línea
     // en la lista de tipo Profesor
-    public void establecerLista() {
+   public void establecerLista() {
         lista = new ArrayList<>();
-
+        
         File f = new File(rutaArchivo);
 
         if (f.exists()) {

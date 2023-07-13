@@ -31,52 +31,49 @@ public class Principal {
         for (int i = 0; i < lectura.obtenerLista().size(); i++) {
             au = lectura.obtenerLista().get(i);
             if (au.getServi().equals("Netflix")) {
-
+                numeroAleatorio = rand.nextInt(900000) + 100000;
                 APINetflix net = new APINetflix();
                 net.establecerUser(lectura.obtenerLista().get(i).getUsu());
-                net.establecerApiKey("(88988");
+                net.establecerApiKey(String.valueOf(numeroAleatorio));
                 APIMovie apiMovi = net;
                 GeneradorPelicula gen = new GeneradorPelicula();
                 gen.establecerLlave(apiMovi);
-                gen.establecerUrl("https://nesflis=");
                 lista.add(gen);
             }
             if (au.getServi().equals("Disney")) {
-
+                numeroAleatorio = rand.nextInt(900000) + 100000;
                 APIDisney dis = new APIDisney();
                 dis.establecerUser(lectura.obtenerLista().get(i).getUsu());
-                dis.establecerApiKey("211221");
+                dis.establecerApiKey(String.valueOf(numeroAleatorio));
                 APIMovie apiMovi = dis;
                 GeneradorPelicula gen = new GeneradorPelicula();
                 gen.establecerLlave(apiMovi);
-                gen.establecerUrl("https://disneyPlus=");
                 lista.add(gen);
             }
             if (au.getServi().equals("Amazon")) {
-
+                numeroAleatorio = rand.nextInt(900000) + 100000;
                 APIAmazonMovie ama = new APIAmazonMovie();
                 ama.establecerUser(lectura.obtenerLista().get(i).getUsu());
-                ama.establecerApiKey("455445");
+                ama.establecerApiKey(String.valueOf(numeroAleatorio));
                 APIMovie apiMovi = ama;
                 GeneradorPelicula gen = new GeneradorPelicula();
                 gen.establecerLlave(apiMovi);
-                gen.establecerUrl("https://amazonMovies=");
                 lista.add(gen);
             }
             if (au.getServi().equals("Startplus")) {
-
+                numeroAleatorio = rand.nextInt(900000) + 100000;
                 APIStartplus star = new APIStartplus();
                 star.establecerUser(lectura.obtenerLista().get(i).getUsu());
-                star.establecerApiKey("788778");
+                star.establecerApiKey(String.valueOf(numeroAleatorio));
                 APIMovie apiMovi = star;
                 GeneradorPelicula gen = new GeneradorPelicula();
                 gen.establecerLlave(apiMovi);
-                gen.establecerUrl("https://moviesplus=");
                 lista.add(gen);
-
             }
         }
-
+        for (int i = 0; i < lista.size(); i++) {
+            lista.get(i).establecerUrl("http://api.movie?api=");
+        }
         for (int i = 0; i < lista.size(); i++) {
             System.out.println(lista.get(i));
         }
