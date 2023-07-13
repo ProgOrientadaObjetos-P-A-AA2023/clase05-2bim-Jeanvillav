@@ -1,13 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package paquete11;
 
 import java.util.Random;
 
-public class APIAmazonMovie implements APIMovie {
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+/**
+ *
+ * @author omerb
+ */
+public class APIStartplus implements APIMovie {
 
     private String apiKey;
     private String user;
@@ -24,7 +27,7 @@ public class APIAmazonMovie implements APIMovie {
     public void establecerApiKey(String ak) {
         Random rand = new Random();
         int numeroAleatorio = rand.nextInt(900000) + 100000;
-        apiKey = ak + "AMAZON" + numeroAleatorio + user;
+        apiKey = ak + "STARTPLUS" + numeroAleatorio + user;
     }
 
     @Override
